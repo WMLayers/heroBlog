@@ -1,42 +1,39 @@
 $(function(){
-//scroll teste 1.0
-	//$(window).on('scroll', function(i){
-	//	var loca = $('.menu').css('top');
-	//	console.log(loca);
-	//})
-	var controller = new ScrollMagic.Controller();
-	var animateElem = document.getElementById("menu");
-	var animateEle = document.getElementById("logo");
-	var animateshadow = document.getElementById("shadow");
-	var scene = new ScrollMagic.Scene({triggerElement: ".container"})
-	.on("enter", function() {
-		animateElem.style.backgroundColor = "rgba(254, 203, 75, 1)";
-		animateEle.style.display = "block";
-		animateshadow.style.display = "block";
-	})
-	.on("leave", function() {
-		animateElem.style.backgroundColor = "";
-		animateEle.style.display = "none";
-		animateshadow.style.display = "none";
-	})
-	.addTo(controller);
-})
 
-$(document).ready(function(){
-    $('.carousel').carousel();
-  });
+	$('button').bind('click', function(){
 
-   var instance = M.Carousel.init({
-    fullWidth: true
-  });
-$('.carousel.carousel-slider').carousel({
-    fullWidth: true
-  });
+		var cidade = $('#cidade').val();
 
-   var instance = M.Carousel.init({
-    fullWidth: true,
-    indicators: true
+		var now = new Date();
+
+		var tempURL = 'https://query.yahooapis.com/v1/public/yql?format=json&rnd=' + now.getFullYear() + now.getMonth() + now.getDay() + now.getHours() + '&diagnostics=true&callback=?&q=select * from weather.forecast where woeid in(select woeid from geo.place(1) where text="'+cidade+'") and u="c"';
+
+		$.ajax({
+			url:encodeURI(tempURL),
+			dataType:'json',
+			type:'GET',
+			beforeSend:function(){
+				$('#tempo').html('carrengando...');
+			},
+			success:function(data) {
+
+				if( data !== null && data.query !== null && data.query.results !== null && data.query.results.channel.description !== 'Yahoo! weather ERROR') {
+
+					var temp = data.query.results.channel.item.condition.temp;
+
+
+					$('#tempo').html(temp+'º C');
+
+				}
+
+			},
+			error:function(){
+				$('#tempo').html('erro');
+			}
+
+		});
+
+	});
+
+
 });
-//animateElem.style.backgroundColor = "rgba(61, 61, 61, 0.5)";
-
-  

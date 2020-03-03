@@ -1,0 +1,36 @@
+.menuL{
+	height: 200px;
+	width: 100%;
+	background-color: red;
+}
+.loginL{
+	height: 50px;
+	width: 100%;
+	background-color: yellow;
+	display: flex;
+	justify-content: flex-end;
+}
+.arealoginL{
+	height: 50px;
+	width: 250px;
+	background-color: green;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.assL{
+	padding-right: 20px;
+	margin-right: 20px;
+	border-right:2px solid #000;
+	font-size: 18px;
+}
+.logoL{
+	height: 100px;
+	width: 100%;
+	background-color: #ccc;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 20px;
+	padding-right: 20px;
+	align-items: center;
+}
