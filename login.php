@@ -14,8 +14,13 @@ require 'templates/head.php';
 		<div class="tempL" id="tempo">28º</div>
 	</div>
 	<div class="searshL">
-		<input type="text" id="cidade"/>
-		<button class="btn" >pesquisar</button>
+		<div class="s1L">
+			<input type="text" id="cidade"/>
+			<button class="btn">pesquisar</button>
+		</div>
+		<div class="redeSL">
+			[ face ]
+		</div>
 	</div>
 </div>
 

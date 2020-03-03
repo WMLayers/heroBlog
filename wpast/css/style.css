@@ -34,3 +34,18 @@
 	padding-right: 20px;
 	align-items: center;
 }
+.searshL{
+	display: flex;
+	justify-content: space-between;
+}
+.s1L{
+	height: 50px;
+	width: 300px;
+	display: flex;
+	align-items: center;
+}
+.redeSL{
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+}
