@@ -11,15 +11,15 @@ require 'templates/head.php';
 	</div>
 	<div class="logoL">
 		<div class="logoimgl">LOGO</div>
-		<div class="tempL" id="tempo">28º</div>
+		<div class="tempL">28º</div>
 	</div>
 	<div class="searshL">
 		<div class="s1L">
-			<input type="text" id="cidade"/>
-			<button class="btn">pesquisar</button>
+			<input type="text" placeholder="buscar" class="buscL"/>
+			<button>pesquisar</button>
 		</div>
 		<div class="redeSL">
-			[ face ]
+			<div>acompanhe  [face] [insta]</div>
 		</div>
 	</div>
 </div>
