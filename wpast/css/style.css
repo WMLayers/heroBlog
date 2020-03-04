@@ -5,14 +5,14 @@
 .loginL{
 	height: 50px;
 	width: 100%;
-	background-color: yellow;
+	background-color: #334558;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+	align-items: center;
 }
 .arealoginL{
 	height: 50px;
 	width: 250px;
-	background-color: green;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -20,25 +20,29 @@
 .assL{
 	padding-right: 20px;
 	margin-right: 20px;
-	border-right:2px solid #000;
+	border-right:2px solid #fff;
 	font-size: 18px;
+	color: #fff;
 }
+.LL{
+	color: #fff;
+}
+
 .logoL{
 	height: 80px;
 	width: 100%;
-	background-color: #ccc;
 	display: flex;
 	justify-content: space-between;
 	padding-left: 20px;
 	padding-right: 20px;
 	align-items: center;
+	padding-left: 47px;
 }
 .searshL{
 	display: flex;
 	justify-content: space-between;
 	height: 30px;
-
-	background-color: purple;
+	background-color: #f3f3f3;
 }
 .s1L{
 	height: 30px;
@@ -48,14 +52,11 @@
 }
 .redeSL{
 	height: 30px;
-	width: 200px;
+	width: 150px;
 	display: flex;
 	align-items: center;
-	justify-content:center; 
-	background-color: red;
+	justify-content: space-around; 
 	font-size: 12px;
 	color: #ccc;
-}
-input .buscL{
-	height: 30px;
+	padding-right: 20px;
 }
