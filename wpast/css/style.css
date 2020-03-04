@@ -1,7 +1,6 @@
 .menuL{
-	height: 200px;
+	height: 150px;
 	width: 100%;
-	background-color: red;
 }
 .loginL{
 	height: 50px;
@@ -25,7 +24,7 @@
 	font-size: 18px;
 }
 .logoL{
-	height: 120px;
+	height: 80px;
 	width: 100%;
 	background-color: #ccc;
 	display: flex;
