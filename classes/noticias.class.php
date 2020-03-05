@@ -44,7 +44,7 @@ class noticias {
 
 			return $noti;
 		} else{
-			echo "erro:";
+			echo "<h1>erro: nao há noticia</h1>";
 		}
 
 	}
