@@ -1,6 +1,22 @@
 <?php
 $chave = "19bc0c77";
 $cidade = "455892";
+//$cidade = "456287";
+//$city_name = "Não Me Toque, RS";
+//$ip = $_SERVER['REMOTE_ADDR'];
+//----------------------------------------------------------------------------------------
+/*
+$link = "https://api.hgbrasil.com/weather?key=19bc0c77&user_ip=".$ip;
+$link = "https://api.hgbrasil.com/weather?key=".$chave."&city_name=".$city_name;
+
+$teste = explode(" ", $link);
+$link = $teste[0]."%20".$teste[1];
+print_r($teste);
+
+//$link = urlencode($link);
+echo $link;
+*/
+//---------------------------------------------------------------------------------------
 $link = "https://api.hgbrasil.com/weather?key=".$chave."&woeid=".$cidade;
 
 $json = file_get_contents($link);
@@ -21,12 +37,12 @@ if($cond == 'storm'){
 }
 if($cond == 'snow'){
 	//storm - tempestade
-	$imgClimate = "storm.png";
+	$imgClimate = "snow.png";
 	$tam = "35";
 }
 if($cond == 'hail'){
 	//storm - tempestade
-	$imgClimate = "storm.png";
+	$imgClimate = "hail.png";
 	$tam = "35";
 }
 if($cond == 'rain'){
@@ -36,7 +52,7 @@ if($cond == 'rain'){
 }
 if($cond == 'fog'){
 	//fog - tempestade
-	$imgClimate = "storm.png";
+	$imgClimate = "fog.png";
 	$tam = "35";
 }
 
