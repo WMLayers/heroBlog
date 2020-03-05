@@ -102,6 +102,7 @@ cloudly_night - nublado de noite
 //echo "cidade: ".$hj->city_name."<br/>";
 //echo "condição: ".$hj->condition_slug."<br/>";
 //echo "dia: ".$hj->currently."<br/>";
+//echo $chave;
 //echo "horas: ".$hj->time."<br/>";
 //foreach($amanha as $item){
 //	echo $item->weekday.": min:".$item->min."º max:".$item->max."º o tempo sera: ".$item->description." <br/>";

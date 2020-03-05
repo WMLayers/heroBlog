@@ -7,3 +7,31 @@ Um projeto de portal de noticia de super herói
 pasta origem no cmd
 
 cd C:\wamp\www\projetox\hero
+
+
+banco de dados()
+-user
+--id
+--nome
+--email
+--senha
+--senha antiga
+-dados
+--id
+--idUser
+--data_nasc
+--nome_completo
+--apelido
+--
+
+-noticia
+--id
+--local
+--title
+--autor
+--data
+--img
+--noticiaC
+--link (?noticia=)
+
+alguma coisa 
