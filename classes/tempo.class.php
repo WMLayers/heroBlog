@@ -1,5 +1,5 @@
 <?php
-$chave = "19bc0c77";
+$chave = "f0ffd485";
 $cidade = "455892";
 //$cidade = "456287";
 //$city_name = "Não Me Toque, RS";
