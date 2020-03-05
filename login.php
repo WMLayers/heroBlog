@@ -33,7 +33,7 @@ require 'classes/tempo.class.php';
 		</div>
 		<div class="redeSL">
 			<div>acompanhe:</div>
-			<a href="#"><img src="wpast/images/face.png" height="18"></a>
+			<a href="http://www.facebook.com.br/wmlayers"><img src="wpast/images/face.png" height="18"></a>
 			<a href="#"><img src="wpast/images/insta.png" height="18"></a>
 		</div>
 	</div>
