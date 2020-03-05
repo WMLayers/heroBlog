@@ -61,5 +61,20 @@
 	padding-right: 20px;
 }
 .tempL{
+	display: flex;
+	height: 50px;
+	width: 150px;
+	flex-wrap: wrap;
+	color:#4d4d4d;
+	align-items: center;
+}
+.tmL{
+	margin-right: 10px;
+}
+.cL{
 	font-size: 30px;
+	font-weight: 600;
+}
+.atualL{
+	margin-top: -15px;
 }

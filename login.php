@@ -1,6 +1,7 @@
 <?php
 $title = "LOGIN";
 require 'templates/head.php';
+require 'classes/tempo.class.php';
 ?>
 <div class="menuL">
 	<div class="loginL">
@@ -14,9 +15,17 @@ require 'templates/head.php';
 	</div>
 	<div class="logoL">
 		<div class="logoimgl">
-			<img src="wpast/images/logoTop.png">
+			<img src="wpast/images/logoTop.png" height="50">
 		</div>
-		<div class="tempL">28º</div>
+		<div class="tempL">
+			<div class="tmL">
+				<img src="wpast/images/climate/<?php echo $imgClimate; ?>" height="<?php echo $tam; ?>">
+			</div>
+			<div class="numL">
+				<div class="cL"><?php echo $tempo; ?></div>
+				<div class="atualL">noite</div>
+			</div>
+		</div>
 	</div>
 	<div class="searshL">
 		<div class="s1L">
