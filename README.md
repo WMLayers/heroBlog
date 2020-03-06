@@ -27,11 +27,15 @@ banco de dados()
 -noticia
 --id
 --local
+--id_categoria
 --title
 --autor
 --data
 --img
+--noticiaR
 --noticiaC
---link (?noticia=)
+--link 
+
+
 
 alguma coisa 

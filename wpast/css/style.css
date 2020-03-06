@@ -1,88 +1,8 @@
 body{
 	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
 }
-/*
-.menuL{
-	height: 150px;
-	width: 100%;
-}
-.loginL{
-	height: 50px;
-	width: 100%;
-	background-color: #334558;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.arealoginL{
-	height: 50px;
-	width: 250px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.assL{
-	padding-right: 20px;
-	margin-right: 20px;
-	border-right:2px solid #fff;
-	font-size: 18px;
-	color: #fff;
-}
-.LL{
-	color: #fff;
-}
-
-.logoL{
-	height: 80px;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	padding-left: 20px;
-	padding-right: 20px;
-	align-items: center;
-	padding-left: 47px;
-}
-.searshL{
-	display: flex;
-	justify-content: space-between;
-	height: 30px;
-	background-color: #f3f3f3;
-}
-.s1L{
-	height: 30px;
-	width: 300px;
-	display: flex;
-	align-items: center;
-}
-.redeSL{
-	height: 30px;
-	width: 150px;
-	display: flex;
-	align-items: center;
-	justify-content: space-around; 
-	font-size: 12px;
-	color: #ccc;
-	padding-right: 20px;
-}
-.tempL{
-	display: flex;
-	height: 50px;
-	width: 150px;
-	flex-wrap: wrap;
-	color:#4d4d4d;
-	align-items: center;
-}
-.tmL{
-	margin-right: 10px;
-}
-.cL{
-	font-size: 30px;
-	font-weight: 600;
-}
-.atualL{
-	margin-top: -15px;
-}
-*/
 
 .MenuTop{
 	height: 150px;
@@ -146,36 +66,6 @@ body{
 /*---- index.php -----------------------------*/
 
 
-a .bannerI{
-	width: 100%;
-	margin-top: 10px;
-	border: 1px solid #ccc;
-	margin-bottom: 50px;
-	padding-bottom: 20px;
-	color: #4d4d4d;
-}
-a .imgBanner{
-	height: 350px;
-	width: 100%;
-	background-color: blue;
-}
-a .titleBanner{
-	width: 100%;
-	font-size: 25px;
-	font-weight: 600;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 20px;
-}
-a .listBanner{
-	margin-top: 10px;
-	padding-left: 20px;
-}
-
-a .container{
-	background-color: red;
-	height: 100px;
-}
 .IndexJ{
 	display: flex;
 	flex-wrap: wrap;
@@ -280,3 +170,58 @@ a .container{
 	font-size: 20px;
 
 }
+/*RODAPÉ --------------------------------------------------*/
+.footer{
+	height: 300px;
+	background-color: #112737;
+	width: 100%;
+	margin-top: 50px;
+}
+.Ftop{
+	height: 100px;
+	background: rgb(77, 77, 77);
+	background: linear-gradient(180deg, rgba(77,77,77,1) 0%, rgba(24,24,24,1) 100%);
+	width: 100%;
+	display: flex;
+	padding-left: 50px;
+	padding-right: 50px;
+	align-items: center;
+	justify-content: space-around;
+
+}
+.Fcenter{
+	height: 150px;
+	width: 100%;
+	background-color:#112737;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.Fbottom{
+	height: 50px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgb(77, 77, 77);
+	background: linear-gradient(180deg, rgba(77,77,77,1) 0%, rgba(24,24,24,1) 100%);
+	font-size: 13px;
+	color: #ccc;
+}
+.SubFtop{
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #ccc;
+}
+.divi{
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+.divi a{
+	color: #ccc;
+}
+
+

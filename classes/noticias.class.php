@@ -49,7 +49,7 @@ class noticias {
 
 	}
 	public function getNoticias(){
-		$sql = "SELECT * FROM noticia";
+		$sql = "SELECT * FROM noticia ORDER BY data DESC";
 		$sql = $this->pdo->query($sql);
 		if($sql->rowCount() > 0){
 			$array = $sql->fetchAll();

@@ -1,6 +1,6 @@
 <?php
 $link = $_GET['noticia'];
-
+$semMaterialize = 'false';	
 require 'classes/noticias.class.php';
 $not = new noticias();
 $N = $not->getNoticiaCompleta($link);
@@ -47,28 +47,7 @@ require 'templates/menuTop.php';
 	
 	<div class="noticiaN">
 		<div class="textoN">
-		<?php 
-			$noticiaHN = $N['noticiaC'];
-			$tex = explode('.', $noticiaHN);
-			$n = 0;
-			$max = 0;
-			$tn = count($tex);
-			foreach($tex as $t):
-				if($max == 2){
-					$max = 0;
-					
-						echo $tex[$n].".<br/><br/>";
-					
-					$n++;
-				}else{
-					$max++;
-					
-						echo $tex[$n].".";
-						
-					$n++;
-				}
-			endforeach;
-		?>
+			<?php echo $N['noticiaC']; ?>
 		</div>
 	</div>
 
@@ -76,6 +55,7 @@ require 'templates/menuTop.php';
 
 
 <?php
+require 'templates/rodape.php';
 require 'templates/foot.php';
 ?>
 <Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

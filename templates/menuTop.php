@@ -1,9 +1,11 @@
 <div class="MenuTop">
-	<div class="menuLeft">
-		<div class="linhaMenu"></div>
-		<div class="linhaMenu"></div>
-		<div class="linhaMenu"></div>
-	</div>
+	<a href="addmat.php">
+		<div class="menuLeft">
+			<div class="linhaMenu"></div>
+			<div class="linhaMenu"></div>
+			<div class="linhaMenu"></div>
+		</div>
+	</a>
 	<div class="imgMenuLogo">
 		<a href="index.php"><img src="wpast/images/logoTop.png"></a>
 	</div>

@@ -1,7 +1,8 @@
 <?php
 $title = "Home";
 $link1 = '<a href="#" class="assL">CADASTRE-SE</a>';
-$link2 = '<a href="login.php" class="LL">LOGIN</a>';	
+$link2 = '<a href="login.php" class="LL">LOGIN</a>';
+$semMaterialize = 'false';	
 require 'templates/head.php';
 require 'classes/tempo.class.php';
 require 'templates/menuTop.php';
@@ -48,6 +49,7 @@ $HN = new noticias();
 </div>
 
 <?php
+require 'templates/rodape.php';
 require 'templates/foot.php';
 ?>
 <Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

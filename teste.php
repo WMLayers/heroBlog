@@ -1,18 +1,18 @@
 <?php
-require 'classes/noticias.class.php';
+//require 'classes/noticias.class.php';
 
-$not = new noticias();
+//$not = new noticias();
 
 
 
-$data = date('Y-m-d H:i:s');
-$dataform = date('Y/m/d/H/i/s', strtotime($data));
-$title = "ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.";
-$explo = explode(' ', $title);
-$implo = implode('-', $explo);
+//$data = date('Y-m-d H:i:s');
+//$dataform = date('Y/m/d/H/i/s', strtotime($data));
+//$title = "ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+//tempor incididunt ut labore et dolore magna aliqua.";
+//$explo = explode(' ', $title);
+//$implo = implode('-', $explo);
 
-$link = $dataform."/".$implo;
+//$link = $dataform."/".$implo;
 
 //$am = explode('-', $link);
 
@@ -24,39 +24,81 @@ $link = $dataform."/".$implo;
 //echo $implo."<br/>";
 //echo $hash."<br/><br/>";
 //echo $dataform."<br/><br/>";
-echo $link."<br/><br/>";
+//echo $link."<br/><br/>";
+?>
 
-$texto = "A Defesa Civil do Estado de São Paulo e o Corpo de Bombeiros elevaram para 42 o número de desaparecidos após as chuvas na Baixada Santista, no litoral de São Paulo. 
+<?php
+$title = "Home";
+$link1 = '<a href="#" class="assL">CADASTRE-SE</a>';
+$link2 = '<a href="login.php" class="LL">LOGIN</a>';
+$semMaterialize = 'false';	
+require 'templates/head.php';
+require 'classes/tempo.class.php';
+require 'templates/menuTop.php';
 
-O temporal começou na noite de segunda-feira (2) e se seguiu até a madrugada de terça-feira (3). As equipes de buscas já encontraram 28 pessoas mortas, vítimas dos deslizamentos de terra causados pela forte chuva.
+//require 'teste.php';
 
-Nesta quinta-feira, o número de desaparecidos subiu em Guarujá de 16 para 37. 
+require 'classes/noticias.class.php';
 
-Segundo a Defesa Civil e o Corpo de Bombeiros, as autoridades fizeram o cruzamento das listas de moradores do Morro Barreira do João Guarda do Programa Saúde da Família e da Defesa Civil. 
+$HN = new noticias();
+?>
 
-Ainda segundo as autoridades, mais de 50 casas foram atingidas pelo deslizamento no bairro, por isso, é possível que esse número de desaparecidos suba ainda mais.
 
-'Todas as pessoas que foram dadas como desaparecidas pelos familiares foram contabilizadas com base em dados dos órgãos de saúde, assistência social e Defesa Civil, além do Corpo de Bombeiros, em uma contagem única para facilitar esse balanço', disse o Capitão Marcos Palumbo, porta-voz do Corpo de Bombeiros do Estado de São Paulo.
-
-Ainda segundo a Defesa Civil, além dos 37 desaparecidos em Guarujá, há 5 em Santos e 1 em São Vicente.";
-
-$tex = explode('.', $texto);
-$n = 0;
-$max = 0;
-$tn = count($tex);
-//echo $tn;
-foreach($tex as $t){
-	if($max == 2){
-		$max = 0;
-		echo $tex[$n].".<br/><br/><br/>";
-		$n++;
-	}else{
-		$max++;
-		echo $tex[$n].".";
-		$n++;
-	}
+<div class="container IndexJ">
 	
-	
-}
+	<?php
+	$nots = $HN->getNoticias();
+	$numeroItem = 0;
+	foreach($nots as $Ni):?>
 
-http://projetox.pc/hero/0
+		<a href="noticias.php?noticia=<?php echo $Ni['link']; ?>">
+			<?php
+			
+			if($numeroItem == 1){
+					?>
+						<div class="IndJ">
+							<?php 
+								if($Ni['img'] == ''){
+									echo "";
+								}else{
+									?>
+									<div class="bannerimg">
+										<img src="<?php echo $Ni['img']; ?>" class="imgIndexBanner" height="200">
+										<div class="classIndex">[<?php echo strtoupper($Ni['local']); ?>]</div>
+									</div>
+									<?php
+								} 
+							?>
+							<div class="noticiaIndex">
+								<div class="titleIndexN"><?php echo $Ni['title']; ?></div>
+								<div class="resumoIndexN"><?php echo $Ni['noticiaR']; ?></div>
+								<div class="autorIndexN">Por <?php echo strtoupper($Ni['autor']); ?></div>
+							</div>	
+						</div>
+					<?php
+			}else{
+				?>
+					<div class="bannerTop">
+						
+					</div>
+				<?php
+				$numeroItem++;
+			}
+			?>
+		</a><br/><br/>
+
+	<?php endforeach; ?>
+
+
+</div>
+
+<?php
+require 'templates/rodape.php';
+require 'templates/foot.php';
+?>
+<Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
