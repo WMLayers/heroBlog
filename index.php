@@ -13,32 +13,34 @@ require 'classes/noticias.class.php';
 $HN = new noticias();
 ?>
 
-<a href="noticias.php?noticia=<?php echo $link; ?>">
-	<div class="bannerI">
-		<div class="imgBanner">
-			
-		</div>
-		<div class="titleBanner">
-			ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.
-		</div>
-		<div class="listBanner">
-			<ul>
-				<li>Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur.</li>
-				<li>Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-			</ul>
-		</div>
-	</div>
-</a>
-<div class="container">
+
+<div class="container IndexJ">
 	
 	<?php
 	$nots = $HN->getNoticias();
 	foreach($nots as $Ni):?>
 
-		<a href="noticias.php?noticia=<?php echo $Ni['link']; ?>"><?php echo $Ni['title']; ?></a><br/><br/>
+		<a href="noticias.php?noticia=<?php echo $Ni['link']; ?>">
+			<div class="IndJ">
+				<?php 
+					if($Ni['img'] == ''){
+						echo "";
+					}else{
+						?>
+						<div class="bannerimg">
+							<img src="<?php echo $Ni['img']; ?>" class="imgIndexBanner" height="200">
+							<div class="classIndex">[<?php echo strtoupper($Ni['local']); ?>]</div>
+						</div>
+						<?php
+					} 
+				?>
+				<div class="noticiaIndex">
+					<div class="titleIndexN"><?php echo $Ni['title']; ?></div>
+					<div class="resumoIndexN"><?php echo $Ni['noticiaR']; ?></div>
+					<div class="autorIndexN">Por <?php echo strtoupper($Ni['autor']); ?></div>
+				</div>	
+			</div>
+		</a><br/><br/>
 
 	<?php endforeach; ?>
 

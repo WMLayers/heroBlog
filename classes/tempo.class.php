@@ -32,56 +32,56 @@ $atual = $hj->currently;
 
 if($cond == 'storm'){
 	//storm - tempestade
-	$imgClimate = "storm.png";
+	$imgClimate = "stormB.png";
 	$tam = "35";
 }
 if($cond == 'snow'){
 	//storm - tempestade
-	$imgClimate = "snow.png";
+	$imgClimate = "snowB.png";
 	$tam = "35";
 }
 if($cond == 'hail'){
 	//storm - tempestade
-	$imgClimate = "hail.png";
+	$imgClimate = "hailB.png";
 	$tam = "35";
 }
 if($cond == 'rain'){
 	//rain - chuva
-	$imgClimate = "rain.png";
+	$imgClimate = "rainB.png";
 	$tam = "35";
 }
 if($cond == 'fog'){
 	//fog - tempestade
-	$imgClimate = "fog.png";
+	$imgClimate = "fogB.png";
 	$tam = "35";
 }
 
 if($cond == 'clear_day'){
 	//clear_day - dia limpo
-	$imgClimate = "sun.png";
+	$imgClimate = "sunB.png";
 	$tam = "35";
 }
 
 if($cond == 'clear_night'){
 	//clear_night - noite limpa
-	$imgClimate = "moon.png";
+	$imgClimate = "moonB.png";
 	$tam = "35";
 }
 
 if($cond == 'cloud'){
 	//cloud - nublado
-	$imgClimate = "cloud.png";
+	$imgClimate = "cloudB.png";
 	$tam = "25";
 }
 if($cond == 'cloudly_day'){
 	//cloudly_day - nublado de dia
-	$imgClimate = "dayCloudy.png";
+	$imgClimate = "dayCloudyB.png";
 	$tam = "35";
 }
 
 if($cond == 'cloudly_night'){
 	//cloudly_night - nublado de noite
-	$imgClimate = "moonCloudy.png";
+	$imgClimate = "moonCloudyB.png";
 	$tam = "35";
 }
 

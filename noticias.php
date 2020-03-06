@@ -33,12 +33,45 @@ require 'templates/menuTop.php';
 	<div class="dateN">Última atualização: <?php echo $data; ?> ás <?php echo $horas; ?></div>
 </div>
 <div class="container notN">
-	<div class="imgN">
-		<img src="<?php echo $N['img']; ?>" height="500">
+	<?php
+	if($N['img'] == ''){
+		echo "";
+	}else{
+		?>
+		<div class="imgN">
+			<img src="<?php echo $N['img']; ?>" height="500">
+		</div>
+		<?php
+	}
+	?>
+	
+	<div class="noticiaN">
+		<div class="textoN">
+		<?php 
+			$noticiaHN = $N['noticiaC'];
+			$tex = explode('.', $noticiaHN);
+			$n = 0;
+			$max = 0;
+			$tn = count($tex);
+			foreach($tex as $t):
+				if($max == 2){
+					$max = 0;
+					
+						echo $tex[$n].".<br/><br/>";
+					
+					$n++;
+				}else{
+					$max++;
+					
+						echo $tex[$n].".";
+						
+					$n++;
+				}
+			endforeach;
+		?>
+		</div>
 	</div>
-	<div class="notCN">
-		 	<?php echo $N['noticiaC']; ?>
-	</div>
+
 </div>
 
 

@@ -1,3 +1,7 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+/*
 .menuL{
 	height: 150px;
 	width: 100%;
@@ -78,6 +82,66 @@
 .atualL{
 	margin-top: -15px;
 }
+*/
+
+.MenuTop{
+	height: 150px;
+	width: 100%;
+	background-color: #112737;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.ClimateMenu{
+	display: flex;
+	height: 50px;
+	flex-wrap: wrap;
+	color:#fff;
+	align-items: center;
+}
+.cL{
+	font-size: 30px;
+	font-weight: 600;
+}
+.atualL{
+	margin-top: -15px;
+}
+.menuLeft{
+
+}
+.linhaMenu{
+	height: 3px;
+	width: 40px;
+	background-color: #fff;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.SubMenu{
+	height: 30px;
+	width: 100%;
+	background-color: #f3f3f3;
+	display: flex;
+	justify-content: flex-end;
+}
+.redeSL{
+	height: 30px;
+	width: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around; 
+	font-size: 12px;
+	color: #c7c7c7;
+	padding-right: 20px;
+}
+.classIndex{
+	margin-top: -30px;
+	margin-left: 10px;
+	font-size: 18px;
+	color: #fff;
+
+}
 
 /*---- index.php -----------------------------*/
 
@@ -112,9 +176,45 @@ a .container{
 	background-color: red;
 	height: 100px;
 }
+.IndexJ{
+	display: flex;
+	flex-wrap: wrap;
+}
+.IndJ{
+	height: 200px;
+	max-width: 800px;
 
+	margin-top: 10px;
+	margin-left: 10px;
+	display: flex;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	margin-bottom: 30px;
+}
+.noticiaIndex{
+	color: #4d4d4d;
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.titleIndexN{
+	font-size: 18px;
+	font-weight: 600;
+	padding-right: 10px;
+}
+.resumoIndexN{
+	font-size: 14px;
+	margin-top: 10px;
+	padding-right: 10px;
+}
+.autorIndexN{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
 
-
+}
 
 /* noticia.php ---------------------------------------*/
 
@@ -128,14 +228,15 @@ a .container{
 	margin-top: 40px;
 	padding-left: 50px;
 	padding-right: 50px;
-	font-size: 35px;
-	font-weight: 600;
+	font-size: 40px;
+	font-weight: 700;
 }
 .notiAbN{
 	width: 100%;
 	padding-left: 50px;
 	margin-top: 20px;
 	font-size: 18px;
+	padding-right: 50px;
 }
 .porN{
 	height: 50px;
@@ -164,14 +265,18 @@ a .container{
 }
 .notN{
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .imgN{
-	margin-top: 50px;
-	width: 400px;
-	
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
 }
-.notCN{
-	width: 400px;
+.noticiaN{
 	margin-top: 50px;
-	margin-left: 20px;
+	width: 80%;
+	font-size: 20px;
+
 }
