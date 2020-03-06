@@ -44,7 +44,7 @@ $HN = new noticias();
 ?>
 
 
-<div class="container IndexJ">
+<div class="container">
 	
 	<?php
 	$nots = $HN->getNoticias();
@@ -78,8 +78,8 @@ $HN = new noticias();
 					<?php
 			}else{
 				?>
-					<div class="bannerTop">
-						
+					<div class="bannerTop" style="background-image: url(<?php echo $Ni['img']; ?>); background-repeat: no-repeat; background-size: cover;">
+						<div class="titleBanner"><?php echo $Ni['title']; ?></div>
 					</div>
 				<?php
 				$numeroItem++;

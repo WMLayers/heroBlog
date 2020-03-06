@@ -35,6 +35,7 @@ banco de dados()
 --noticiaR
 --noticiaC
 --link 
+--view
 
 
 

@@ -4,6 +4,7 @@ $semMaterialize = 'false';
 require 'classes/noticias.class.php';
 $not = new noticias();
 $N = $not->getNoticiaCompleta($link);
+$not->addView($link);
 $data = date('d.m.Y', strtotime($N['data']));
 $horas = date('H:i', strtotime($N['data']));
 

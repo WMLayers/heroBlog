@@ -57,6 +57,14 @@ class noticias {
 			return $array;
 		}
 	}
+	public function addView($link){
+		$view = 1;
+		$sql = "UPDATE noticia SET view = view + :view WHERE link = :link";
+		$sql = $this->pdo->prepare($sql);
+		$sql->bindValue(":view", $view);
+		$sql->bindValue(":link", $link);
+		$sql->execute();
+	}
 
 
 }

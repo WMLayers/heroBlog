@@ -22,7 +22,7 @@
 <div class="SubMenu">
 	<div class="redeSL">
 		<div>acompanhe:</div>
-		<a href="http://www.facebook.com.br/wmlayers"><img src="wpast/images/face.png" height="18"></a>
+		<a href="http://www.facebook.com.br/wmlayers" target="__blank"><img src="wpast/images/face.png" height="18"></a>
 		<a href="#"><img src="wpast/images/insta.png" height="18"></a>
 	</div>
 </div>

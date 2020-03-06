@@ -15,32 +15,50 @@ $HN = new noticias();
 ?>
 
 
-<div class="container IndexJ">
+<div class="container">
 	
 	<?php
 	$nots = $HN->getNoticias();
+	$numeroItem = 0;
 	foreach($nots as $Ni):?>
 
 		<a href="noticias.php?noticia=<?php echo $Ni['link']; ?>">
-			<div class="IndJ">
-				<?php 
-					if($Ni['img'] == ''){
-						echo "";
-					}else{
-						?>
-						<div class="bannerimg">
-							<img src="<?php echo $Ni['img']; ?>" class="imgIndexBanner" height="200">
-							<div class="classIndex">[<?php echo strtoupper($Ni['local']); ?>]</div>
+			<?php
+			
+			if($numeroItem == 1){
+					?>
+						<div class="IndJ">
+							<?php 
+								if($Ni['img'] == ''){
+									echo "";
+								}else{
+									?>
+									<div class="bannerimg">
+										<img src="<?php echo $Ni['img']; ?>" class="imgIndexBanner" height="200">
+										<div class="classIndex">[<?php echo strtoupper($Ni['local']); ?>]</div>
+									</div>
+									<?php
+								} 
+							?>
+							<div class="noticiaIndex">
+								<div class="titleIndexN"><?php echo $Ni['title']; ?></div>
+								<div class="resumoIndexN"><?php echo $Ni['noticiaR']; ?></div>
+								<div class="autorIndexN">
+									<div style="display:flex; align-items: center;"><i class='tiny material-icons'>visibility</i><?php echo $Ni['view']; ?></div>
+									<?php echo "Por ".strtoupper($Ni['autor']);?>
+								</div>
+							</div>	
 						</div>
-						<?php
-					} 
+					<?php
+			}else{
 				?>
-				<div class="noticiaIndex">
-					<div class="titleIndexN"><?php echo $Ni['title']; ?></div>
-					<div class="resumoIndexN"><?php echo $Ni['noticiaR']; ?></div>
-					<div class="autorIndexN">Por <?php echo strtoupper($Ni['autor']); ?></div>
-				</div>	
-			</div>
+					<div class="bannerTop" style="background-image: url(<?php echo $Ni['img']; ?>); background-repeat: no-repeat; background-size: cover;">
+						<div class="titleBanner"><?php echo $Ni['title']; ?></div>
+					</div>
+				<?php
+				$numeroItem++;
+			}
+			?>
 		</a><br/><br/>
 
 	<?php endforeach; ?>
