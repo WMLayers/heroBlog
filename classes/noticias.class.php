@@ -65,6 +65,15 @@ class noticias {
 		$sql->bindValue(":link", $link);
 		$sql->execute();
 	}
+	public function getNoticiaView(){
+		$sql = "SELECT * FROM noticia ORDER BY view DESC";
+		$sql = $this->pdo->query($sql);
+		if($sql->rowCount() > 0){
+			$array = $sql->fetchAll();
+
+			return $array;
+		}
+	}
 
 
 }

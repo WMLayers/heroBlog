@@ -49,46 +49,94 @@ $HN = new noticias();
 	<?php
 	$nots = $HN->getNoticias();
 	$numeroItem = 0;
+	$numeroContainer = 0;
 	foreach($nots as $Ni):?>
 
 		<a href="noticias.php?noticia=<?php echo $Ni['link']; ?>">
 			<?php
-			
-			if($numeroItem == 1){
-					?>
-						<div class="IndJ">
-							<?php 
-								if($Ni['img'] == ''){
-									echo "";
-								}else{
-									?>
-									<div class="bannerimg">
-										<img src="<?php echo $Ni['img']; ?>" class="imgIndexBanner" height="200">
-										<div class="classIndex">[<?php echo strtoupper($Ni['local']); ?>]</div>
+			if($numeroContainer <= 5){
+				if($numeroItem == 1){
+						?>
+							<div class="IndJ">
+								<?php 
+									if($Ni['img'] == ''){
+										echo "";
+									}else{
+										?>
+										<div class="bannerimg">
+											<img src="<?php echo $Ni['img']; ?>" class="imgIndexBanner" height="200">
+											<div class="classIndex">[<?php echo strtoupper($Ni['local']); ?>]</div>
+										</div>
+										<?php
+									} 
+								?>
+								<div class="noticiaIndex">
+									<div class="titleIndexN"><?php echo $Ni['title']; ?></div>
+									<div class="resumoIndexN"><?php echo $Ni['noticiaR']; ?></div>
+									<div class="autorIndexN">
+										<div style="display:flex; align-items: center;"><i class='tiny material-icons'>visibility</i><?php echo $Ni['view']; ?></div>
+										<?php echo "Por ".strtoupper($Ni['autor']);?>
 									</div>
-									<?php
-								} 
-							?>
-							<div class="noticiaIndex">
-								<div class="titleIndexN"><?php echo $Ni['title']; ?></div>
-								<div class="resumoIndexN"><?php echo $Ni['noticiaR']; ?></div>
-								<div class="autorIndexN">Por <?php echo strtoupper($Ni['autor']); ?></div>
-							</div>	
+								</div>	
+							</div>
+						<?php
+				}else{
+					?>
+						<div class="bannerTop" style="background-image: url(<?php echo $Ni['img']; ?>); background-repeat: no-repeat; background-size: cover;">
+							<div class="titleBanner"><?php echo $Ni['title']; ?></div>
 						</div>
 					<?php
+					$numeroItem++;
+					
+				}
+				$numeroContainer++;
 			}else{
-				?>
-					<div class="bannerTop" style="background-image: url(<?php echo $Ni['img']; ?>); background-repeat: no-repeat; background-size: cover;">
-						<div class="titleBanner"><?php echo $Ni['title']; ?></div>
-					</div>
-				<?php
-				$numeroItem++;
+				
 			}
 			?>
 		</a><br/><br/>
 
 	<?php endforeach; ?>
+	<h2>MAIS CLICADO</h2>
+	<?php 
+		$viewM = $HN->getNoticiaView();
+		$clicados = 0;
+		foreach($viewM as $Vi): 
+	?>
+	<a href="noticias.php?noticia=<?php echo $Vi['link']; ?>">
 
+		<?php 
+		if($clicados <= 5){
+		?>
+			<div class="IndJ">
+				<?php 
+					if($Vi['img'] == ''){
+						echo "";
+					}else{
+				?>
+				<div class="bannerimg">
+				<img src="<?php echo $Vi['img']; ?>" class="imgIndexBanner" height="200">
+					<div class="classIndex">[<?php echo strtoupper($Vi['local']); ?>]</div>
+				</div>
+				<?php
+					} 
+				?>
+				<div class="noticiaIndex">
+					<div class="titleIndexN"><?php echo $Vi['title']; ?></div>
+					<div class="resumoIndexN"><?php echo $Vi['noticiaR']; ?></div>
+					<div class="autorIndexN">
+						<div style="display:flex; align-items: center;"><i class='tiny material-icons'>visibility</i><?php echo $Vi['view']; ?></div>
+						<?php echo "Por ".strtoupper($Vi['autor']);?>
+					</div>
+				</div>	
+			</div>
+		<?php
+		$clicados++;	
+		}else{
+
+		}				
+		endforeach;
+	?>
 
 </div>
 
