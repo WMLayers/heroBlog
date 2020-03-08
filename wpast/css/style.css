@@ -1,5 +1,5 @@
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -24,6 +24,7 @@ body{
 .cL{
 	font-size: 30px;
 	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
 }
 .atualL{
 	margin-top: -15px;
@@ -60,72 +61,189 @@ body{
 	margin-left: 10px;
 	font-size: 18px;
 	color: #fff;
-
 }
 
 /*---- index.php -----------------------------*/
-
-.bannerTop{
+.BannerIndex{
 	height: 400px;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-
+	background-size: cover;
 }
-.titleBanner{
-	font-size: 25px;
-	font-weight: bold;
+.vermais{
+	height: 40px;
+	width: 100px;
+	border: 1px solid #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ccc;
+	cursor: pointer;
+}
+.degradeBannerIndex{
 	width: 100%;
-	padding-left: 20px;
-	padding-right: 20px;
+	height: 100%;
 	background: rgb(77, 77, 77);
 	background: linear-gradient(180deg, rgba(77,77,77,0) 0%, rgba(24,24,24,1) 100%);
-}
-a .titleBanner{
-	color: #fff;
-}
-
-.IndexJ{
-	display: flex;
-	flex-wrap: wrap;
-}
-.IndJ{
-	height: 200px;
-	max-width: 800px;
-
-	margin-top: 10px;
-	margin-left: 10px;
-	display: flex;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	margin-bottom: 30px;
-}
-.noticiaIndex{
-	color: #4d4d4d;
-	margin-left: 10px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
+	padding-left: 50px;
 }
-.titleIndexN{
-	font-size: 18px;
-	font-weight: 600;
-	padding-right: 10px;
+.generoBannerIndex span{
+	background-color: yellow;
+	padding: 4px;
+	font-weight: bold;
+	color: #4d4d4d;
 }
-.resumoIndexN{
-	font-size: 14px;
-	margin-top: 10px;
-	padding-right: 10px;
+.titleBannerIndex{
+	font-size: 30px;
+	font-weight: bolder;
+	color: #fff;
+	margin-top: 20px;
+	max-width: 600px;
 }
-.autorIndexN{
+
+.porBannerIndex{
+	color: #ccc;
+	margin-top: 20px;
+}
+
+.maisVisualizado{
+	height: 610;
+	margin-top: 20px;
+}
+.visualizadoMiniBanner{
+	height: 300px;
+	background-position: center;
+	background-size: cover;
+}
+.degradeMiniBanner{
 	width: 100%;
+	height: 100%;
+	background: rgb(77, 77, 77);
+	background: linear-gradient(180deg, rgba(77,77,77,0) 0%, rgba(24,24,24,1) 100%);
 	display: flex;
-	justify-content: space-between;
-	padding-right: 10px;
-
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 20px;
+}
+.titleMiniBanner{
+	font-size: 18px;
+	max-width: 500px;
+	color: #fff;
+	margin-top: 20px;
+}
+.visuMiniBanner{
+	display:flex;
+	align-items: center;
+	color: #fff;
+}
+.visuDiv{
+	margin-top: 10px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.visuDivImg{
+	width: 100%;
+	height: 150px; 
+	background-position: center;
+	background-size: cover;
+}
+.titleDiv{
+	font-weight: bold;
+	margin-top: 10px;
+}
+.porDiv{
+	font-size: 12px;
+	margin-top: 10px;
+}
+.generoDiv span{
+	background-color: yellow;
+	padding: 4px;
+	color: #4d4d4d;
+	margin-top: 10px;
+}
+.visuDiv{
+	color: #4d4d4d;
+}
+.addRecente{
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	margin-top: 20px;
+}
+.degradeAddRecente{
+	width: 100%;
+	height: 100%;
+	background: rgb(77, 77, 77);
+	background: linear-gradient(180deg, rgba(77,77,77,0) 0%, rgba(24,24,24,1) 100%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 20px;
+}
+.generoAddRecente span{
+	background-color: yellow;
+	padding: 4px;
+	color: #4d4d4d;
+	font-weight: bold;
+}
+.titleAddRecente{
+	color: #fff;
+	font-size: 18px;
+	max-width: 400px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.NoticiaAddRecente{
+	margin-bottom: 10px;
+	border-bottom:1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+.IMGAddRecente{
+	height: 100px;
+	min-width: 200px;
+	background-size: cover;
+	background-position: center;
+}
+.titleAdd{
+	color: #000;
+	margin-bottom: 10px;
+}
+.NoticiaAddRecente .vermais{
+	margin-top: 10px;
+	color: #4d4d4d;
+}
+.bottomAdd{
+	display: flex;
+	justify-content: space-around; 
+	align-items: center;
+	margin-bottom: 10px;
+}
+.row h5{
+	margin-left: 150px;
+}
+.todasAsNot{
+	overflow: auto;
+	border-top: 1px solid #ccc;
+	height: 800px; 
+}
+.AllDiv{
+	height: 200px;
+	margin-top: 10px;
+}
+.AllDivImg{
+	height: 200px;
+	min-width: 200px;
+	background-size: cover;
+	background-position: center;
 }
 
+.titleAllDiv{
+	font-size: 25px;
+	max-width: 600px;
+	color: #fff;
+}
 /* noticia.php ---------------------------------------*/
 
 .localN{

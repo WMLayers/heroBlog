@@ -138,28 +138,7 @@ $HN = new noticias();
 	endforeach;
 ?>
 </div>
-<div class="row">
-	<h5>All news</h5>
-	<div class="col s6 offset-s1 todasAsNot">
-	<?php
-		$Todas = $HN->getNoticias();
-		foreach($Todas as $All):
-	?>	
-			<div class="col s12 AllDiv">
-				<a href="noticias.php?noticia=<?php echo $All['link']; ?>">
-					<div class="AllDivImg" style="background-image: url(<?php echo $All['img']; ?>);">
-						<div class="degradeAddRecente">
-							<div class="titleAllDiv"><?php echo $All['title']; ?></div>
-							<div class="generoAddRecente"><span><?php echo $All['local']; ?></span></div>
-						</div>
-					</div>
-				</a>
-			</div>
-	<?php
-		endforeach;
-	?>
-	</div>
-</div>
+
 
 
 

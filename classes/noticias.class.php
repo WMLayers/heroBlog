@@ -17,8 +17,9 @@ class noticias {
 		$date = date('Y-m-d H:i:s');
 		$dataform = date('Y/m/d/H/i/s', strtotime($date));
 		$link = $dataform."/".$implo;
+		$view = 0;
 
-		$sql = "INSERT INTO noticia (local, title, autor, data, img, noticiaR, noticiaC, link) VALUES (:local, :title, :autor, :data, :img, :noticiaR, :noticiaC, :link)";
+		$sql = "INSERT INTO noticia (local, title, autor, data, img, noticiaR, noticiaC, link, view) VALUES (:local, :title, :autor, :data, :img, :noticiaR, :noticiaC, :link, :view)";
 		$sql = $this->pdo->prepare($sql);
 		$sql->bindValue(":local", $local);
 		$sql->bindValue(":title" ,$title);
@@ -28,6 +29,7 @@ class noticias {
 		$sql->bindValue(":noticiaR", $noticiaR);
 		$sql->bindValue(":noticiaC", $noticia);
 		$sql->bindValue(":link", $link);
+		$sql->bindValue(":view", $view);
 		$sql->execute();
 
 	}
