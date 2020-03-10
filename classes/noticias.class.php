@@ -7,10 +7,10 @@ class noticias {
 	public function __construct(){
 		$this->pdo = new PDO("mysql:dbname=heroBlog;host=localhost", "root", "");
 	}
-	
 
+	public function addNoticiaC($title, $autor, $noticia, $noticiaR, $gen, $img=''){
 
-	public function addNoticiaC($title, $autor, $noticia, $noticiaR, $local='',$img=''){
+		$genero = $this->getGen($gen);
 
 		$explo = explode(' ', $title);
 		$implo = implode('-', $explo);
@@ -19,9 +19,10 @@ class noticias {
 		$link = $dataform."/".$implo;
 		$view = 0;
 
-		$sql = "INSERT INTO noticia (local, title, autor, data, img, noticiaR, noticiaC, link, view) VALUES (:local, :title, :autor, :data, :img, :noticiaR, :noticiaC, :link, :view)";
+		$sql = "INSERT INTO noticia (local, gen, title, autor, data, img, noticiaR, noticiaC, link, view) VALUES (:local, :gen, :title, :autor, :data, :img, :noticiaR, :noticiaC, :link, :view)";
 		$sql = $this->pdo->prepare($sql);
-		$sql->bindValue(":local", $local);
+		$sql->bindValue(":local", $genero['nomeCt']);
+		$sql->bindValue(":gen", $gen);
 		$sql->bindValue(":title" ,$title);
 		$sql->bindValue(":autor", $autor);
 		$sql->bindValue(":data", $date);
@@ -74,6 +75,28 @@ class noticias {
 			$array = $sql->fetchAll();
 
 			return $array;
+		}
+	}
+	public function getGenero(){
+		$sql = "SELECT * FROM categoria";
+		$sql = $this->pdo->query($sql);
+		if($sql->rowCount() > 0){
+			$array = $sql->fetchAll();
+
+			return $array;
+		}
+	}
+
+	private function getGen($gen){
+		$sql = "SELECT nomeCt FROM categoria WHERE id = :id";
+		$sql = $this->pdo->prepare($sql);
+		$sql->bindValue(":id", $gen);
+		$sql->execute();
+
+		if($sql->rowCount() > 0){
+			$gen = $sql->fetch();
+
+			return $gen;
 		}
 	}
 

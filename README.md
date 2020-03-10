@@ -40,3 +40,14 @@ banco de dados()
 
 
 alguma coisa 
+
+1cinema -- amarelo
+2serie -- 
+3hq --
+4noticias --
+5bilheteria --
+6artigos --
+7critica
+
+
+7 3 1 1 0 7 1 2 1 6 1 6 1 2 1 1 1

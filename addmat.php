@@ -19,10 +19,10 @@ if(isset($_POST['title']) && !empty($_POST['title'])){
 	$autor = addslashes($_POST['autor']);
 	$noticia = $_POST['noticia'];
 	$noticiaR = $_POST['noticiaR'];
-	$local = addslashes($_POST['local']);
+	$gen = addslashes($_POST['gen']);
 	$img = addslashes($_POST['img']);
 
-	$HN->addNoticiaC($title, $autor, $noticia, $noticiaR, $local, $img);
+	$HN->addNoticiaC($title, $autor, $noticia, $noticiaR, $gen, $img);
 
 }
 ?>
@@ -39,12 +39,20 @@ if(isset($_POST['title']) && !empty($_POST['title'])){
 		</textarea><br/>
 		resumo<br/>
 		<textarea name="noticiaR" id="editor2" rows="10" cols="80"></textarea><br/>
-		Local<br/>
-		<input type="text" name="local" style="height: 30px; width: 500px; padding: 10px;"><br/>
+		Gênero:
+		<select name="gen">
+			<?php 
+				$cat = $HN->getGenero();
+				foreach($cat as $gen):
+			?>
+				<option value="<?php echo $gen['id']; ?>"><?php echo ucfirst($gen['nomeCt']); ?></option>
+			<?php
+				endforeach;
+			?>
+		</select><br/>
 		URL da imagem<br/>
 		<input type="text" name="img" style="height: 30px; width: 500px; padding: 10px;"><br/><br/>
 		<input type="submit" value="POSTAR" class="btn">
-
 
 	</form>
 </div>
